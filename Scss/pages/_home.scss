@@ -1,0 +1,177 @@
+/* Localisation */
+
+.localisation {
+    @extend %Flex-center;
+    flex-direction: row;
+    background-color: $fond-gris-1;
+    box-shadow: inset 0px 10px 5px -11px grey;
+    height: 50px;
+
+    i   {
+        text-align: center;
+        height: 16px;
+        margin-right: 10px;
+    }
+}
+
+/* Reservation */
+
+.reserve{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: $fond-gris-2;
+    padding: 20px 0 20px 0;
+
+    h1  {
+        padding: 0 60px 0 60px;
+        margin-bottom: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    p   {
+        padding: 0 40px 0 40px;
+        text-align: center;
+        color: var(--grey, #353535);
+    }
+}
+
+/*  Fonctionnement */
+
+.roadMap{
+    padding: 30px;
+
+    h2{
+        margin-bottom: 20px;
+    }
+
+    &__step-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.step-wrap {
+    
+    &__step1    {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        position: relative;
+    
+    span    {
+        background-color: #9356DC;
+        height: 27px;
+        width: 27px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: absolute;
+        bottom: 22px;
+        left: -3px;
+        }
+    }
+}
+
+.step1 {
+
+    &__step2    {
+        @extend %Flex-center;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        height: 70px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        margin-left: 10px;
+
+        i   {
+            margin: 0px 20px 0px 30px;
+        }
+    }
+}
+
+/*  Restaurants */
+
+.restaurant {
+    background-color: #f3f3f3;
+    padding: 20px;
+
+    h2{
+        margin: 20px 0 20px 0;
+    }
+}
+
+.bloc-article {
+
+    &__menu {
+        margin-bottom: 30px;
+        background-color: white;
+        position: relative;
+        height: 251px;
+        border-radius: 15px;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                border-radius: 15px 15px 0px 0px;
+                height: 170px;
+                bottom: 1px;
+            }
+
+
+            span {
+                width: 130px;
+                height: 200px;
+            }
+
+            span i{
+                position: absolute;
+                right: 30px;
+                bottom: 30px;
+            }
+
+            span:hover {
+                background-color: #9356DC;
+                color: #9356DC;
+            }
+
+    }
+
+}
+
+.menu-carte   {
+
+    &__menu-texte {
+        margin: 10px;
+
+        h3  {
+            margin: 0;
+            margin: 5px;
+        }
+
+        p   {
+            font-size: 17px;
+            font-style: normal;
+        }
+    }
+}
+
+.menu {
+    
+    &__libellé {
+        @extend %Flex-center;
+        background-color: #99E2D0;
+        color: #008766;
+        border-radius: 2px;
+        width: 90px;
+        height: 40px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
