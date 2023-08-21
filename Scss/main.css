@@ -1,7 +1,7 @@
 /* color */
 /* background-color */
 /* Flex-box*/
-.navBar, .navBar__logoMain {
+.navBar__logoMain {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,20 +73,4 @@ h1, h2 {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-/* Barre de navigation */
-.navBar {
-  width: 100%;
-  height: 70px;
-  position: relative;
-}
-.navBar__logo2 img {
-  width: 200px;
-  height: 40px;
-}
-.navBar__arrow {
-  width: 50px;
-  position: absolute;
-  left: 25px;
 }/*# sourceMappingURL=main.css.map */

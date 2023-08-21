@@ -2,8 +2,9 @@
 
 // 1. Configuration and helpers
 @import
-  'abstracts/variables',
-  'abstracts/mixins';
+  'utils/variables',
+  'utils/mixins',
+  'utils/placeholders';
 
 // 3. Base stuff
 @import

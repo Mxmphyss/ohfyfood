@@ -1,3 +1,21 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+/* Barre de navigation */
+
+.navBar{
+
+    &__logoMain {
+        @extend %Flex-center;
+        height: 70px;
+        box-shadow: 5px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    &__logoMain img {
+        width: 200px;
+        height: 40px;
+    }
+}
