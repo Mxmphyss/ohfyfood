@@ -40,8 +40,8 @@ p, h2, h3 {
   margin: 5px;
 }
 
-* {
-  font-family: "Roboto";
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 /* Barre de navigation */
