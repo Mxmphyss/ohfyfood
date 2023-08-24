@@ -1,11 +1,23 @@
 @charset "UTF-8";
 /* color */
 /* background-color */
+/* Color utils */
+/* Typography */
+/* Media queries */
+/* Tablette */
+/* desktop ++ */
+/* Media Restaurants */
+/* Tablette & desktop*/
 /* Flex-box*/
-.menu__libellé, .step1__step2, .localisation, .navBar__logoMain {
+.Menu__titleMenu, .background, .navBar__logo, .navBar, .menu__libellé, .step1__step2, .localisation, .background button, .navBar__logoMain {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.menu-content__plats {
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -85,6 +97,126 @@ p, h2, h3 {
   margin: 30px;
 }
 
+.background button {
+  width: 200px;
+  height: 50px;
+  border: 0;
+  border-radius: 25px;
+  background: var(--button-gradient, linear-gradient(-10deg, #9356DC 0%, #FF79DA 100%));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  margin: 20px 30px;
+}
+
+/* Media-queries*/
+@media screen and (min-width: 768px) {
+  /* Fonctionnement */
+  .roadMap {
+    padding: 60px 30px;
+  }
+  .roadMap h2 {
+    padding-left: 112px;
+    margin-bottom: 40px;
+  }
+  .roadMap__step-wrap {
+    justify-content: center;
+    flex-direction: row;
+  }
+  .step-wrap__step1 {
+    width: 30%;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+  }
+  .step1__step2 {
+    padding-right: 10px;
+  }
+  .step1__step2 p {
+    text-align: center;
+  }
+  .step1__step2 i {
+    margin-right: 5px;
+  }
+  /* Restaurants */
+  .restaurant {
+    padding: 30px 150px 30px 150px;
+  }
+  .restaurant h2 {
+    margin-bottom: 20px;
+  }
+  .bloc-article__menu {
+    height: 360px;
+  }
+  .menu__menu-carte img {
+    height: 280px;
+  }
+  /* Footer */
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 100px;
+    padding: 20px 35px;
+  }
+  .footer img {
+    width: 130px;
+    height: 25px;
+    margin-bottom: 5px;
+  }
+  .footer span {
+    display: flex;
+    flex-direction: row;
+    margin: 0 35px 0 35px;
+    text-align: center;
+  }
+  .footer__footer-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-nav__foot-align {
+    margin: 0 5px 0 5px;
+  }
+  .footer-nav__foot-align p {
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* Fonctionnement */
+  .roadMap {
+    padding: 60px 180px;
+  }
+  .roadMap h2 {
+    padding: 0;
+  }
+  .step-1__step2 i {
+    margin: 0px 20px 0px 30px;
+  }
+  /* Restaurants */
+  .restaurant {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 130px 30px 130px;
+  }
+  .restaurant h2 {
+    padding-left: 45px;
+  }
+  .restaurant__bloc-article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .bloc-article__menu {
+    height: 300px;
+    width: 40%;
+    margin: 30px 20px;
+  }
+  .menu__menu-carte img {
+    height: 231px;
+  }
+  /* footer */
+  .footer-nav__foot-align p {
+    margin-left: 5px;
+  }
+}
 /* Localisation */
 .localisation {
   flex-direction: row;
@@ -194,6 +326,7 @@ p, h2, h3 {
 }
 .bloc-article__menu span i {
   position: absolute;
+  font-size: 25px;
   right: 30px;
   bottom: 30px;
 }
@@ -223,4 +356,169 @@ p, h2, h3 {
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+.container-2 h1, .container-2 h2 {
+  font-family: "Shrikhand";
+}
+
+@media screen and (min-width: 768px) {
+  /* L'image de fond */
+  .illustration img {
+    height: 360px;
+  }
+  /* Le menu */
+  .Menu {
+    width: 75%;
+    background-color: #f3f3f3;
+  }
+  .Menu button {
+    margin: 30px 150px;
+  }
+  .Menu__titleMenu {
+    justify-content: center;
+  }
+  /* Footer */
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 100px;
+    padding: 20px 35px;
+  }
+  .footer img {
+    width: 130px;
+    height: 25px;
+    margin-bottom: 5px;
+  }
+  .footer span {
+    display: flex;
+    flex-direction: row;
+    margin: 0 35px 0 35px;
+    text-align: center;
+  }
+  .footer__footer-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-nav__foot-align {
+    margin: 0 5px 0 5px;
+  }
+  .footer-nav p {
+    margin-left: 10px;
+  }
+}
+/* Barre de navigation */
+.navBar {
+  width: 100%;
+  height: 70px;
+  position: relative;
+}
+.navBar__arrow {
+  width: 50px;
+  position: absolute;
+  left: 25px;
+}
+.navBar__logo img {
+  width: 200px;
+  height: 40px;
+}
+
+/* Image de fond */
+.illustration {
+  position: relative;
+  height: 290px;
+  z-index: 1;
+}
+.illustration img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 360px;
+}
+
+/* Background */
+.background {
+  position: relative;
+  height: 1245px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+/* Le menu */
+.background__Menu {
+  width: 100%;
+  background-color: white;
+  border-radius: 40px 40px 0 0;
+  padding: 1px 0px 20px 0px;
+  z-index: 2;
+  position: absolute;
+  top: 30px;
+}
+
+.Menu__titleMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.Menu__titleMenu h1 {
+  font-size: 30px;
+  margin-right: 50px;
+  margin-bottom: 0;
+}
+.Menu__titleMenu i {
+  position: absolute;
+  right: 30px;
+  margin-top: 24px;
+  font-size: 30px;
+}
+.Menu__bouton {
+  display: flex;
+  justify-content: center;
+}
+
+/* - Entrées */
+.background__Menu h3, .background__Menu p, .background__Menu h4 {
+  margin: 0;
+}
+.background__Menu h4 {
+  margin-top: 35px;
+}
+
+.Menu__menu-content {
+  margin-bottom: 10px;
+}
+.Menu__menu-content p {
+  margin-bottom: 10;
+}
+
+.menu-content__trait {
+  border: solid 2px #99E2D0;
+  width: 40px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.menu-content__plats {
+  position: relative;
+  height: 50px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 15px 0 15px 15px;
+  box-shadow: 0px 10.0114941597px 20.0431032181px 7px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+.menu-content__plats h3 {
+  margin: 5px 0 5px 0;
+  font-weight: bolder;
+}
+.menu-content__plats p {
+  font-weight: lighter;
+}
+.menu-content__plats span {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-weight: bolder;
 }/*# sourceMappingURL=main.css.map */

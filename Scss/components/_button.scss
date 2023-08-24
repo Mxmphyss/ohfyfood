@@ -3,14 +3,29 @@
 .reserve {
 
     button {
-    width: 200px;
-    height: 50px;
-    border: 0;
-    border-radius: 25px;
-    background: var(--button-gradient, linear-gradient(-10deg, #9356DC 0%, #FF79DA 100%));
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    color: white;
-    padding: 13px 19px 13px 19px;
-    margin: 30px;
+        width: 200px;
+        height: 50px;
+        border: 0;
+        border-radius: 25px;
+        background: var(--button-gradient, linear-gradient(-10deg, #9356DC 0%, #FF79DA 100%));
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        color: white;
+        padding: 13px 19px 13px 19px;
+        margin: 30px;
+    }
+}
+
+.background {
+
+    button {
+        @extend %Flex-center;
+        width: 200px;
+        height: 50px;
+        border: 0;
+        border-radius: 25px;
+        background: var(--button-gradient, linear-gradient(-10deg, #9356DC 0%, #FF79DA 100%));
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        color: white;
+        margin: 20px 30px;
     }
 }
