@@ -5,8 +5,6 @@
     }
 }
 
-@include media-R-768;
-
 /* Barre de navigation */
 
 .navBar {
@@ -47,7 +45,7 @@
 
 /* Background */
 
-.background {
+.background, .background2 {
     @extend %Flex-center;
     position: relative;
     height: 1245px;
@@ -56,22 +54,34 @@
     padding-bottom: 30px;
 }
 
+.background2 {
+    height: 1345px;
+}
+
 /* Le menu */
 
 .background {
 
-    &__Menu {
+    &__Menu, &__Menu2 {
         width: 100%;
         background-color: white;
         border-radius: 40px 40px 0 0;
-        padding: 1px 0px 20px 0px;
+        padding: 1px 20px 20px 20px;
         z-index: 2;
-        position: absolute;
         top: 30px;
+        
+            h3, p, h4 {
+                margin: 0;
+            }
+    
+            h4 {
+                margin-top: 35px;
+            }
+
         }
 }
 
-.Menu {
+.Menu, .Menu2 {
     
     &__titleMenu {
         @extend %Flex-center;
@@ -101,21 +111,7 @@
 
 /* - Entrées */
 
-.background {
-    
-    &__Menu {
-        
-        h3, p, h4 {
-        margin: 0;
-        }
-
-        h4 {
-            margin-top: 35px;
-        }
-    }
-}
-
-.Menu {
+.Menu, .Menu2 {
     
     &__menu-content {
         margin-bottom: 10px;
@@ -166,3 +162,101 @@
 
     }
 }
+
+@media screen and (min-width: 768px) {
+
+        /* L'image de fond */
+    
+        .illustration {
+            height: 430px;
+            img {
+                height: 450px;
+            }
+        }
+    
+        /* Le menu */
+
+        .background__Menu {
+            position: relative;
+            width: 60%;
+            background-color: $fond-gris-2;
+            padding: 0 10%;
+        }
+
+/* La note enchanté */
+
+        .background2 {
+            height: 1340px;
+        }
+
+        .background__Menu2 {
+            position: relative;
+            width: 60%;
+            background-color: $fond-gris-2;
+            padding: 0 10%;
+        }
+
+        /* Suite Menu */
+
+        .Menu, .Menu2 {
+            &__titleMenu {
+                justify-content: center;
+            }
+
+            &__bouton {
+                margin: 40px 0;
+            }
+        }
+
+        .Menu__titleMenu {
+            h1 {
+                margin-right: 25px;
+            }
+            i {
+                position: initial;
+            }
+        }
+    
+        /* Footer */
+    
+        .footer {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            height: 100px;
+            padding: 20px 35px;
+            
+            img {
+            width: 130px;
+            height: 25px;
+            margin-bottom: 5px;
+            }
+
+            span {
+                display: flex;
+                flex-direction: row;
+                margin: 0 35px 0 35px;
+                text-align: center;
+            }
+
+
+            &__footer-nav {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    
+    
+        .footer-nav {
+            
+            &__foot-align {
+            margin: 0 5px 0 5px;
+            }
+            
+            p {
+            margin-left: 10px;
+            }
+
+        }
+    
+    }

@@ -1,15 +1,9 @@
 @charset "UTF-8";
 /* color */
 /* background-color */
-/* Color utils */
 /* Typography */
-/* Media queries */
-/* Tablette */
-/* desktop ++ */
-/* Media Restaurants */
-/* Tablette & desktop*/
 /* Flex-box*/
-.Menu__titleMenu, .background, .navBar__logo, .navBar, .menu__libellé, .step1__step2, .localisation, .background button, .navBar__logoMain {
+.Menu__titleMenu, .Menu2__titleMenu, .background, .background2, .navBar__logo, .navBar, .menu__libellé, .step1__step2, .localisation, .background button, .navBar__logoMain {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,115 +102,6 @@ body {
   margin: 20px 30px;
 }
 
-/* Media-queries*/
-@media screen and (min-width: 768px) {
-  /* Fonctionnement */
-  .roadMap {
-    padding: 60px 30px;
-  }
-  .roadMap h2 {
-    padding-left: 112px;
-    margin-bottom: 40px;
-  }
-  .roadMap__step-wrap {
-    justify-content: center;
-    flex-direction: row;
-  }
-  .step-wrap__step1 {
-    width: 30%;
-    margin: 0 10px 0 0;
-    padding: 0 10px 0 0;
-  }
-  .step1__step2 {
-    padding-right: 10px;
-  }
-  .step1__step2 p {
-    text-align: center;
-  }
-  .step1__step2 i {
-    margin-right: 5px;
-  }
-  /* Restaurants */
-  .restaurant {
-    padding: 30px 150px 30px 150px;
-  }
-  .restaurant h2 {
-    margin-bottom: 20px;
-  }
-  .bloc-article__menu {
-    height: 360px;
-  }
-  .menu__menu-carte img {
-    height: 280px;
-  }
-  /* Footer */
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    height: 100px;
-    padding: 20px 35px;
-  }
-  .footer img {
-    width: 130px;
-    height: 25px;
-    margin-bottom: 5px;
-  }
-  .footer span {
-    display: flex;
-    flex-direction: row;
-    margin: 0 35px 0 35px;
-    text-align: center;
-  }
-  .footer__footer-nav {
-    display: flex;
-    flex-direction: row;
-  }
-  .footer-nav__foot-align {
-    margin: 0 5px 0 5px;
-  }
-  .footer-nav__foot-align p {
-    margin-left: 10px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  /* Fonctionnement */
-  .roadMap {
-    padding: 60px 180px;
-  }
-  .roadMap h2 {
-    padding: 0;
-  }
-  .step-1__step2 i {
-    margin: 0px 20px 0px 30px;
-  }
-  /* Restaurants */
-  .restaurant {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 130px 30px 130px;
-  }
-  .restaurant h2 {
-    padding-left: 45px;
-  }
-  .restaurant__bloc-article {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .bloc-article__menu {
-    height: 300px;
-    width: 40%;
-    margin: 30px 20px;
-  }
-  .menu__menu-carte img {
-    height: 231px;
-  }
-  /* footer */
-  .footer-nav__foot-align p {
-    margin-left: 5px;
-  }
-}
 /* Localisation */
 .localisation {
   flex-direction: row;
@@ -253,19 +138,13 @@ body {
 
 /*  Fonctionnement */
 .roadMap {
-  padding: 30px;
+  padding: 15px 24px 15px 15px;
 }
 .roadMap h2 {
   margin-bottom: 20px;
 }
-.roadMap__step-wrap {
-  display: flex;
-  flex-direction: column;
-}
 
 .step-wrap__step1 {
-  display: flex;
-  flex-direction: row;
   margin-bottom: 20px;
   position: relative;
 }
@@ -295,11 +174,19 @@ body {
 .step1__step2 i {
   margin: 0px 20px 0px 30px;
 }
+.step1__step2__market {
+  margin: 0px 20px 0px 30px;
+}
+
+.step2__market:hover {
+  color: #9356DC;
+  cursor: pointer;
+}
 
 /*  Restaurants */
 .restaurant {
   background-color: #f3f3f3;
-  padding: 20px;
+  padding: 15px;
 }
 .restaurant h2 {
   margin: 20px 0 20px 0;
@@ -358,25 +245,46 @@ body {
   right: 15px;
 }
 
-.container-2 h1, .container-2 h2 {
-  font-family: "Shrikhand";
-}
-
+/* Media queries */
 @media screen and (min-width: 768px) {
-  /* L'image de fond */
-  .illustration img {
+  /* Fonctionnement */
+  .roadMap {
+    padding: 30px 40px 30px 30px;
+  }
+  .roadMap h2 {
+    margin-bottom: 40px;
+  }
+  .roadMap__step-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .step-wrap__step1 {
+    width: 28%;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+  }
+  .step1__step2 {
+    padding-right: 10px;
+  }
+  .step1__step2 p {
+    text-align: center;
+  }
+  .step1__step2 i {
+    margin-right: 5px;
+  }
+  /* Restaurants */
+  .restaurant {
+    padding: 30px 150px 30px 150px;
+  }
+  .restaurant h2 {
+    margin-bottom: 20px 20px;
+  }
+  .bloc-article__menu {
     height: 360px;
   }
-  /* Le menu */
-  .Menu {
-    width: 75%;
-    background-color: #f3f3f3;
-  }
-  .Menu button {
-    margin: 30px 150px;
-  }
-  .Menu__titleMenu {
-    justify-content: center;
+  .menu__menu-carte img {
+    height: 280px;
   }
   /* Footer */
   .footer {
@@ -404,10 +312,53 @@ body {
   .footer-nav__foot-align {
     margin: 0 5px 0 5px;
   }
-  .footer-nav p {
+  .footer-nav__foot-align p {
     margin-left: 10px;
   }
 }
+/* desktop ++ */
+@media screen and (min-width: 1024px) {
+  /* Fonctionnement */
+  .roadMap {
+    padding: 60px 172px;
+  }
+  .roadMap h2 {
+    margin-left: 15px;
+  }
+  .step-1__step2 i {
+    margin: 0px 20px 0px 30px;
+  }
+  /* Restaurants */
+  .restaurant {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 130px 30px 130px;
+  }
+  .restaurant h2 {
+    padding-left: 58px;
+  }
+  .restaurant__bloc-article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .bloc-article__menu {
+    height: 300px;
+    width: 40%;
+    margin: 30px 20px;
+  }
+  .menu__menu-carte img {
+    height: 231px;
+  }
+  /* footer */
+  .footer-nav__foot-align p {
+    margin-left: 5px;
+  }
+}
+.container-2 h1, .container-2 h2 {
+  font-family: "Shrikhand", cursive;
+}
+
 /* Barre de navigation */
 .navBar {
   width: 100%;
@@ -438,7 +389,7 @@ body {
 }
 
 /* Background */
-.background {
+.background, .background2 {
   position: relative;
   height: 1245px;
   display: flex;
@@ -446,50 +397,52 @@ body {
   padding-bottom: 30px;
 }
 
+.background2 {
+  height: 1345px;
+}
+
 /* Le menu */
-.background__Menu {
+.background__Menu, .background__Menu2 {
   width: 100%;
   background-color: white;
   border-radius: 40px 40px 0 0;
-  padding: 1px 0px 20px 0px;
+  padding: 1px 20px 20px 20px;
   z-index: 2;
-  position: absolute;
   top: 30px;
 }
+.background__Menu h3, .background__Menu p, .background__Menu h4, .background__Menu2 h3, .background__Menu2 p, .background__Menu2 h4 {
+  margin: 0;
+}
+.background__Menu h4, .background__Menu2 h4 {
+  margin-top: 35px;
+}
 
-.Menu__titleMenu {
+.Menu__titleMenu, .Menu2__titleMenu {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
-.Menu__titleMenu h1 {
+.Menu__titleMenu h1, .Menu2__titleMenu h1 {
   font-size: 30px;
   margin-right: 50px;
   margin-bottom: 0;
 }
-.Menu__titleMenu i {
+.Menu__titleMenu i, .Menu2__titleMenu i {
   position: absolute;
   right: 30px;
   margin-top: 24px;
   font-size: 30px;
 }
-.Menu__bouton {
+.Menu__bouton, .Menu2__bouton {
   display: flex;
   justify-content: center;
 }
 
 /* - Entrées */
-.background__Menu h3, .background__Menu p, .background__Menu h4 {
-  margin: 0;
-}
-.background__Menu h4 {
-  margin-top: 35px;
-}
-
-.Menu__menu-content {
+.Menu__menu-content, .Menu2__menu-content {
   margin-bottom: 10px;
 }
-.Menu__menu-content p {
+.Menu__menu-content p, .Menu2__menu-content p {
   margin-bottom: 10;
 }
 
@@ -521,4 +474,73 @@ body {
   right: 15px;
   bottom: 15px;
   font-weight: bolder;
+}
+
+@media screen and (min-width: 768px) {
+  /* L'image de fond */
+  .illustration {
+    height: 430px;
+  }
+  .illustration img {
+    height: 450px;
+  }
+  /* Le menu */
+  .background__Menu {
+    position: relative;
+    width: 60%;
+    background-color: #f3f3f3;
+    padding: 0 10%;
+  }
+  /* La note enchanté */
+  .background2 {
+    height: 1340px;
+  }
+  .background__Menu2 {
+    position: relative;
+    width: 60%;
+    background-color: #f3f3f3;
+    padding: 0 10%;
+  }
+  /* Suite Menu */
+  .Menu__titleMenu, .Menu2__titleMenu {
+    justify-content: center;
+  }
+  .Menu__bouton, .Menu2__bouton {
+    margin: 40px 0;
+  }
+  .Menu__titleMenu h1 {
+    margin-right: 25px;
+  }
+  .Menu__titleMenu i {
+    position: initial;
+  }
+  /* Footer */
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 100px;
+    padding: 20px 35px;
+  }
+  .footer img {
+    width: 130px;
+    height: 25px;
+    margin-bottom: 5px;
+  }
+  .footer span {
+    display: flex;
+    flex-direction: row;
+    margin: 0 35px 0 35px;
+    text-align: center;
+  }
+  .footer__footer-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-nav__foot-align {
+    margin: 0 5px 0 5px;
+  }
+  .footer-nav p {
+    margin-left: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */

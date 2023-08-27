@@ -1,8 +1,3 @@
-/* Media-queries*/
-
-@include media-768;
-@include media-1024;
-
 /* Localisation */
 
 .localisation {
@@ -46,28 +41,21 @@
 /*  Fonctionnement */
 
 .roadMap{
-    padding: 30px;
+    padding: 15px 24px 15px 15px;
 
     h2{
         margin-bottom: 20px;
-    }
-
-    &__step-wrap {
-        display: flex;
-        flex-direction: column;
     }
 }
 
 .step-wrap {
     
     &__step1    {
-        display: flex;
-        flex-direction: row;
         margin-bottom: 20px;
         position: relative;
     
     span    {
-        background-color: #9356DC;
+        background-color: $primary;
         height: 27px;
         width: 27px;
         border-radius: 50%;
@@ -97,14 +85,23 @@
         i   {
             margin: 0px 20px 0px 30px;
         }
+
+        &__market {
+            margin: 0px 20px 0px 30px;
+        }
     }
+}
+
+.step2__market:hover {
+    color: $primary;
+    cursor: pointer;
 }
 
 /*  Restaurants */
 
 .restaurant {
     background-color: #f3f3f3;
-    padding: 20px;
+    padding: 15px;
 
     h2{
         margin: 20px 0 20px 0;
@@ -142,8 +139,8 @@
             }
 
             span:hover {
-                background-color: #9356DC;
-                color: #9356DC;
+                background-color: $primary;
+                color: $primary;
             }
 
     }
@@ -171,7 +168,7 @@
     
     &__libellé {
         @extend %Flex-center;
-        background-color: #99E2D0;
+        background-color: $tertiary;
         color: #008766;
         border-radius: 2px;
         width: 90px;
@@ -181,3 +178,192 @@
         right: 15px;
     }
 }
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+
+    /* Fonctionnement */
+
+    .roadMap{
+        padding: 30px 40px 30px 30px;
+
+        h2 {
+        margin-bottom: 40px;
+        }
+
+        &__step-wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+
+    .step-wrap {
+
+        &__step1 {
+            width: 28%;
+            margin: 0 10px 0 0;
+            padding: 0 10px 0 0;
+        }
+    }
+
+    .step1 {
+
+        &__step2 {
+            padding-right: 10px;
+
+            p {
+                text-align: center;
+            }
+
+            i{
+                margin-right: 5px;
+            }
+        }
+    }
+
+    /* Restaurants */
+
+    .restaurant {
+        padding: 30px 150px 30px 150px;
+    
+        h2 {
+            margin-bottom: 20px 20px;
+        }
+    }
+
+    .bloc-article {
+
+        &__menu {
+            height: 360px;
+        }
+    }
+
+    .menu {
+
+        &__menu-carte {
+
+            img {
+                height: 280px;
+            }
+        }
+    }
+
+    /* Footer */
+
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        height: 100px;
+        padding: 20px 35px;
+    
+        img{
+            width: 130px;
+            height: 25px;
+            margin-bottom: 5px;
+        }
+
+        span {
+            display: flex;
+            flex-direction: row;
+            margin: 0 35px 0 35px;
+            text-align: center;
+        }
+
+
+        &__footer-nav {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .footer-nav {
+
+    &__foot-align {
+            margin: 0 5px 0 5px;
+        
+            p   {
+                margin-left: 10px;
+            }
+        }
+    
+    }
+
+}
+
+/* desktop ++ */
+
+@media screen and (min-width: 1024px) {
+
+    /* Fonctionnement */
+
+    .roadMap{
+        padding: 60px 172px;
+
+        h2 {
+            margin-left: 15px;
+        }
+    }
+
+    .step-1 {
+
+        &__step2 {
+        
+            i{
+                margin: 0px 20px 0px 30px;
+            }
+        }
+    }
+
+    /* Restaurants */
+
+    .restaurant {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 130px 30px 130px;
+
+        h2 {
+            padding-left: 58px;
+        }
+
+        &__bloc-article {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+
+    .bloc-article {
+
+        &__menu {
+            height: 300px;
+            width: 40%;
+            margin: 30px 20px;
+        }
+    }
+
+    .menu {
+
+        &__menu-carte {
+
+            img {
+                height: 231px;
+            }
+        }
+    }
+
+    /* footer */
+
+    .footer-nav {
+
+        &__foot-align {
+            
+            p {
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
