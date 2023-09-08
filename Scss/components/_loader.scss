@@ -1,6 +1,7 @@
 /* Loader homepage */
 
 .loader-container {
+    display: none;
     animation: loader2 1.5s forwards;
     position: fixed;
     background: var(--button-gradient, linear-gradient(-10deg, #9356DC 0%, $secondary 100%));

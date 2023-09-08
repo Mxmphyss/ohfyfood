@@ -31,16 +31,12 @@
     display: none;
   }
 }
+/* Animation like */
 /* Flex-box*/
-.Menu__titleMenu, .Menu2__titleMenu, .background, .background2, .navBar__logo, .navBar, .menu__libellé, .step1__step2, .localisation, .loader-container, .background button, .navBar__logoMain {
+.plats-content__checkbox, .Menu__titleMenu, .Menu2__titleMenu, .background, .background2, .navBar__logo, .navBar, .menu__libellé, .step1__step2, .localisation, .loader-container, .background button, .navBar__logoMain {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.menu-content__plats {
-  display: flex;
-  flex-direction: column;
 }
 
 body {
@@ -119,6 +115,7 @@ body {
   padding: 13px 19px 13px 19px;
   margin: 30px;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 .reserve button:hover {
   transform: scale(1.1);
@@ -137,6 +134,7 @@ body {
   color: white;
   margin: 20px 30px;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 .background button:hover {
   transform: scale(1.1);
@@ -147,6 +145,7 @@ body {
 
 /* Loader homepage */
 .loader-container {
+  display: none;
   animation: loader2 1.5s forwards;
   position: fixed;
   background: var(--button-gradient, linear-gradient(-10deg, #9356DC 0%, #FF79DA 100%));
@@ -264,7 +263,6 @@ body {
   margin-bottom: 30px;
   background-color: white;
   position: relative;
-  height: 251px;
   border-radius: 15px;
 }
 .bloc-article__menu img {
@@ -290,18 +288,52 @@ body {
   color: #9356DC;
 }
 
-.menu-carte__menu-texte {
-  margin: 10px;
+.menu-carte__menu-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
 }
-.menu-carte__menu-texte h3 {
+
+.menu-content__menu-texte h3 {
   margin: 0;
   margin: 5px;
 }
-.menu-carte__menu-texte p {
+.menu-content__menu-texte p {
   font-size: 17px;
   font-style: normal;
 }
+.menu-content__like {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 5px;
+  margin-right: 20px;
+}
+.menu-content__like i {
+  bottom: 10px;
+  z-index: 1;
+  font-size: 30px;
+  cursor: pointer;
+}
+.menu-content__like span i {
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  cursor: pointer;
+  color: #9356DC;
+}
+.menu-content__like i:hover {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
 
+.menu__menu-carte {
+  box-sizing: border-box;
+}
 .menu__libellé {
   background-color: #99E2D0;
   color: #008766;
@@ -414,7 +446,7 @@ body {
     justify-content: space-around;
   }
   .bloc-article__menu {
-    height: 300px;
+    height: auto;
     width: 40%;
     margin: 30px 20px;
   }
@@ -426,8 +458,11 @@ body {
     margin-left: 5px;
   }
 }
-.container-2 h1, .container-2 h2 {
+.container-2 h1 {
   font-family: "Shrikhand", cursive;
+}
+.container-2 h2 {
+  font-size: 16px;
 }
 
 /* Barre de navigation */
@@ -462,14 +497,14 @@ body {
 /* Background */
 .background, .background2 {
   position: relative;
-  height: 1245px;
+  height: 1300px;
   display: flex;
   align-items: flex-end;
   padding-bottom: 30px;
 }
 
 .background2 {
-  height: 1345px;
+  height: 1430px;
 }
 
 /* Le menu */
@@ -481,36 +516,54 @@ body {
   z-index: 2;
   top: 30px;
 }
-.background__Menu h3, .background__Menu p, .background__Menu h4, .background__Menu2 h3, .background__Menu2 p, .background__Menu2 h4 {
+.background__Menu h3, .background__Menu p, .background__Menu2 h3, .background__Menu2 p {
   margin: 0;
 }
-.background__Menu h4, .background__Menu2 h4 {
+.background__Menu h2, .background__Menu2 h2 {
   margin-top: 35px;
+  margin-left: 0;
 }
 
 .Menu__titleMenu, .Menu2__titleMenu {
+  margin: 20px 0;
+  padding-top: 10px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .Menu__titleMenu h1, .Menu2__titleMenu h1 {
   font-size: 30px;
-  margin-right: 50px;
-  margin-bottom: 0;
-}
-.Menu__titleMenu i, .Menu2__titleMenu i {
-  position: absolute;
-  right: 30px;
-  margin-top: 24px;
-  font-size: 30px;
-  cursor: pointer;
-}
-.Menu__titleMenu i:hover, .Menu2__titleMenu i:hover {
-  color: #9356DC;
+  margin: 0;
+  margin-top: 5px;
 }
 .Menu__bouton, .Menu2__bouton {
   display: flex;
   justify-content: center;
+}
+
+.titleMenu__like {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+.titleMenu__like i {
+  bottom: 10px;
+  z-index: 1;
+  font-size: 30px;
+  cursor: pointer;
+}
+.titleMenu__like span i {
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  cursor: pointer;
+  color: #9356DC;
+}
+.titleMenu__like i:hover {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 
 /* - Entrées */
@@ -529,28 +582,11 @@ body {
   margin-bottom: 20px;
 }
 
-.menu-content__plats {
+.menu-content__plats-content {
   position: relative;
-  height: 50px;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  padding: 15px 0 15px 15px;
-  cursor: pointer;
-  box-shadow: 0px 10.0114941597px 20.0431032181px 7px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-.menu-content__plats h3 {
-  margin: 5px 0 5px 0;
-  font-weight: bolder;
-}
-.menu-content__plats p {
-  font-weight: lighter;
-}
-.menu-content__plats span {
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 /* Animation plats */
@@ -564,6 +600,46 @@ body {
 .Menu__time3 {
   animation-delay: 2s;
   opacity: 0;
+}
+
+.plats-content__plats {
+  z-index: 2;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  min-width: 80%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 15px 0 15px 15px;
+  cursor: pointer;
+  box-shadow: 0px 10.0114941597px 20.0431032181px 7px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+.plats-content__plats:hover + .plats-content__plats__checkbox {
+  color: 0;
+  background-color: aqua;
+}
+.plats-content__plats h3 {
+  margin: 5px 0 5px 0;
+  font-weight: bolder;
+}
+.plats-content__plats p {
+  font-weight: lighter;
+}
+.plats-content__plats span {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-weight: bolder;
+}
+.plats-content__checkbox {
+  z-index: 1;
+  overflow: hidden;
+  height: 80px;
+  width: 10%;
+  border-radius: 15px;
+  background-color: #99E2D0;
+  margin-left: 1%;
 }
 
 @media screen and (min-width: 768px) {
@@ -583,7 +659,7 @@ body {
   }
   /* La note enchanté */
   .background2 {
-    height: 1340px;
+    height: 1390px;
   }
   .background__Menu2 {
     position: relative;

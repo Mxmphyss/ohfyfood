@@ -114,7 +114,6 @@
         margin-bottom: 30px;
         background-color: white;
         position: relative;
-        height: 251px;
         border-radius: 15px;
 
             img {
@@ -147,10 +146,18 @@
 
 }
 
-.menu-carte   {
+.menu-carte {
+    &__menu-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+}
+
+.menu-content   {
 
     &__menu-texte {
-        margin: 10px;
 
         h3  {
             margin: 0;
@@ -162,9 +169,44 @@
             font-style: normal;
         }
     }
+
+    &__like {
+        position: relative;
+        max-width: 100%;
+        max-height: 100%;
+        margin-top: 5px;
+        margin-right: 20px;
+    
+        i{
+            bottom: 10px;
+            z-index: 1;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    
+        span i{
+            position: absolute;
+            opacity: 0;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            font-size: 30px;
+            cursor: pointer;
+            color: $primary;
+        }
+    
+        i:hover {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+    }
 }
 
 .menu {
+
+    &__menu-carte {
+        box-sizing: border-box;
+    }
     
     &__libellé {
         @extend %Flex-center;
@@ -339,7 +381,7 @@
     .bloc-article {
 
         &__menu {
-            height: 300px;
+            height: auto;
             width: 40%;
             margin: 30px 20px;
         }
