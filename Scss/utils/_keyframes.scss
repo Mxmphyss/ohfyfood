@@ -12,9 +12,34 @@
     }
 }
 
+@-moz-keyframes slide {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Keyframes Loader */
 
 @keyframes loader {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+
+    }
+}
+
+@-moz-keyframes loader {
 
     0% {
         opacity: 1;
@@ -37,5 +62,14 @@
     }
 }
 
-/* Animation like */
+@-moz-keyframes loader2 {
+    from {
+        display: flex;
+    }
 
+    to {
+        display: none;
+    }
+}
+
+/* Animation like */

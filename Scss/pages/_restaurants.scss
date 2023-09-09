@@ -59,7 +59,7 @@
 }
 
 .background2 {
-    height: 1430px;
+    height: 1390px;
 }
 
 /* Le menu */
@@ -73,6 +73,7 @@
         padding: 1px 20px 20px 20px;
         z-index: 2;
         top: 30px;
+        box-sizing: border-box;
         
             h3, p {
                 margin: 0;
@@ -148,7 +149,7 @@
         animation: slide 2s forwards;
     
         p {
-            margin-bottom: 10;
+            margin-bottom: 10px;
         }
     }
 }
@@ -170,6 +171,11 @@
         display: flex;
         flex-direction: row;
         width: 100%;
+        height: 80px;
+        border-radius: 15px;
+        box-shadow: 0px 10.011494159698486px 20.043103218078613px 7px rgba(0, 0, 0, 0.10);
+        margin-bottom: 15px;
+        background-color: white;
     }
 }
 
@@ -178,7 +184,7 @@
 .Menu {
 
     &__time1 {
-        animation-delay: 0;
+        animation-delay: 0s;
     }
     &__time2 {
         animation-delay: 1s;
@@ -194,50 +200,65 @@
 .plats-content {
 
     &__plats {
-        z-index: 2;
         position: relative;
-        height: 50px;
         width: 100%;
         min-width: 80%;
-        border-radius: 15px;
-        margin-bottom: 15px;
         padding: 15px 0 15px 15px;
         cursor: pointer;
-        box-shadow: 0px 10.011494159698486px 20.043103218078613px 7px rgba(0, 0, 0, 0.10);
-        background-color: white;
-
-        &:hover + &__checkbox {
-            color: red($color: #000000);
-            background-color: aqua;
-        }
 
         h3 {
             margin: 5px 0 5px 0;
-            font-weight: bolder;
+            font-weight: 500;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         
         p {
             font-weight: lighter;
         }
-        
-        span {
-            position: absolute;
-            right: 15px;
-            bottom: 15px;
-            font-weight: bolder;
-        }
 
     }
 
     &__checkbox {
-        z-index: 1;
         @extend %Flex-center;
         overflow: hidden;
         height: 80px;
-        width: 10%;
-        border-radius: 15px;
+        width: 0%;
+        color: white;
+        border-radius: 0 15px 15px 0;
         background-color: $tertiary;
-        margin-left: 1%;
+
+        i {
+            font-size: 25px;
+        }
+    }
+}
+
+.menu-content__plats-content:hover .plats-content__checkbox {
+    width: 10%;
+    transition: .5s ease-in-out;
+}
+
+.plats {
+    &__text-plats {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        span {
+            margin: 0 20px;
+            font-weight: 600;
+        }
     }
 }
 
@@ -256,15 +277,18 @@
 
         .background__Menu {
             position: relative;
-            width: 60%;
+            width: 75%;
             background-color: $fond-gris-2;
-            padding: 0 10%;
+        }
+
+        .background {
+            height: 1280px;
         }
 
 /* La note enchanté */
 
         .background2 {
-            height: 1390px;
+            height: 1370px;
         }
 
         .background__Menu2 {
@@ -301,22 +325,12 @@
             display: flex;
             flex-direction: row-reverse;
             align-items: flex-end;
-            height: 100px;
-            padding: 20px 35px;
+            height: 120px;
+            padding: 30px 35px;
             
-            img {
-            width: 130px;
-            height: 25px;
-            margin-bottom: 5px;
+            h1 {
+                margin: 0 40px;
             }
-
-            span {
-                display: flex;
-                flex-direction: row;
-                margin: 0 35px 0 35px;
-                text-align: center;
-            }
-
 
             &__footer-nav {
                 display: flex;
@@ -330,6 +344,17 @@
             &__foot-align {
             margin: 0 5px 0 5px;
             }
+
+            &__contact {
+                display: flex;
+                flex-direction: row;
+                margin: 0 35px 0 35px;
+                text-align: center;
+
+                p {
+                    color: white;
+                }
+            }
             
             p {
             margin-left: 10px;
@@ -338,3 +363,14 @@
         }
     
     }
+
+@media screen and (min-width: 1079px) {
+    .background {
+        &__Menu {
+            box-sizing: border-box;
+            padding-right: 12%;
+            padding-left: 12%;
+            transition: 1s;
+        }
+    }
+}
