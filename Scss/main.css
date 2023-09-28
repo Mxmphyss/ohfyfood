@@ -25,13 +25,13 @@
 }
 @keyframes loader2 {
   from {
-    display: flex;
+    opacity: 1;
   }
   to {
-    display: none;
+    opacity: 0;
+    z-index: -10;
   }
 }
-/* Animation like */
 /* Flex-box*/
 .plats-content__checkbox, .Menu__titleMenu, .Menu2__titleMenu, .background, .background2, .navBar__logo, .navBar, .menu__libellé, .step1__step2, .localisation, .loader-container, .background button, .navBar__logoMain {
   display: flex;
@@ -80,15 +80,13 @@ body {
   color: white;
   padding: 25px;
 }
-.footer h1 {
+.footer h2 {
   font-family: "Shrikhand", cursive;
+  font-size: 30px;
   color: white;
   margin: 0;
   margin-bottom: 10px;
   font-weight: 400;
-}
-.footer span a {
-  color: white;
 }
 
 .footer-nav {
@@ -98,6 +96,9 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.footer-nav__contact a {
+  color: white;
 }
 
 /* Boutons */
@@ -142,7 +143,8 @@ body {
 
 /* Loader homepage */
 .loader-container {
-  animation: loader2 1.5s forwards;
+  animation: loader2 0.5s forwards;
+  animation-delay: 2s;
   position: fixed;
   background: var(--button-gradient, linear-gradient(-10deg, #9356DC 0%, #FF79DA 100%));
   width: 100%;
@@ -455,9 +457,6 @@ body {
 .container-2 h1 {
   font-family: "Shrikhand", cursive;
 }
-.container-2 h2 {
-  font-size: 16px;
-}
 
 /* Barre de navigation */
 .navBar {
@@ -477,7 +476,6 @@ body {
 
 /* Image de fond */
 .illustration {
-  position: relative;
   height: 290px;
   z-index: 1;
 }
@@ -517,6 +515,7 @@ body {
 .background__Menu h2, .background__Menu2 h2 {
   margin-top: 35px;
   margin-left: 0;
+  font-size: 17px;
 }
 
 .Menu__titleMenu, .Menu2__titleMenu {
@@ -555,6 +554,7 @@ body {
   font-size: 30px;
   cursor: pointer;
   color: #9356DC;
+  transition: opacity 1s ease-in-out;
 }
 .titleMenu__like i:hover {
   opacity: 1;
@@ -626,6 +626,7 @@ body {
   color: white;
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
+  transition: width 0.5s ease-in-out;
 }
 .plats-content__checkbox i {
   font-size: 25px;
@@ -633,7 +634,7 @@ body {
 
 .menu-content__plats-content:hover .plats-content__checkbox {
   width: 10%;
-  transition: 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
 
 .plats__text-plats {

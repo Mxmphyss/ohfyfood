@@ -9,16 +9,13 @@
     color: white;
     padding: 25px;
     
-    h1 {
+    h2 {
         @include family-1;
+        font-size: 30px;
         color: white;
         margin: 0;
         margin-bottom: 10px;
         font-weight: 400;
-    }
-    
-    span a {
-        color: white;
     }
 }
 
@@ -29,5 +26,12 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+    }
+
+    &__contact {
+        
+        a {
+        color: white;
+        }
     }
 }
